@@ -1,0 +1,51 @@
+*{
+    direction: rtl;
+    text-align: center;
+    
+}
+.body{
+    display: grid;
+    justify-content: center;
+    background: url(images.jpg);
+    
+}
+.section{
+    background: rgb(221, 221, 221);
+    width: 30rem;
+    min-height: 15rem;
+    border-radius: 10px;
+    margin: 3rem auto 10rem auto;
+}
+.section-output{
+    min-height: 3rem;
+    margin: 3rem;
+    background: rgb(255, 255, 255);
+}
+.section-title{
+    margin-top: 2rem;
+    color: rgb(128, 0, 0);
+}
+.submit{
+    margin-top: 1rem;
+    
+}
+.btn{
+    width: 5rem;
+    height: 1.5rem;
+    border-radius: 0;
+    border: none;
+    background: rgb(119, 111, 100);
+    color: white;
+    font-weight: bold;
+}
+.btn:hover{
+    background: rgb(65, 58, 58);
+    cursor: pointer;
+}
+.printing{
+    transition: 1s;
+}
+
+
+
+
