@@ -1,51 +1,35 @@
 *{
-    direction: rtl;
-    text-align: center;
-    
+    background: black;
 }
-.body{
-    display: grid;
-    justify-content: center;
-    background: url(images.jpg);
-    
+.lamp{
+    display: none;
 }
-.section{
-    background: rgb(221, 221, 221);
-    width: 30rem;
-    min-height: 15rem;
-    border-radius: 10px;
-    margin: 3rem auto 10rem auto;
+.boy{
+    width: 10rem;
+    position: absolute;
+    top: 0;
 }
-.section-output{
-    min-height: 3rem;
-    margin: 3rem;
-    background: rgb(255, 255, 255);
+.boy-img{
+    width: 10rem;
 }
-.section-title{
-    margin-top: 2rem;
-    color: rgb(128, 0, 0);
-}
-.submit{
-    margin-top: 1rem;
-    
-}
-.btn{
-    width: 5rem;
-    height: 1.5rem;
-    border-radius: 0;
-    border: none;
-    background: rgb(119, 111, 100);
-    color: white;
+.on, .off{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: aliceblue;
+    background: rgb(99, 99, 99);
+    width: 5.5rem;
+    height: 3rem;
+    margin: .75rem;
+    box-shadow: 2px 2px rgb(39, 39, 39);
+    border: 2px solid rgb(78, 78, 78);
+    border-radius: 3%;
     font-weight: bold;
+    font-size: 1rem;
 }
-.btn:hover{
-    background: rgb(65, 58, 58);
+.off{
+    right: 6rem;
+}
+.on, .off:hover{
     cursor: pointer;
 }
-.printing{
-    transition: 1s;
-}
-
-
-
-
