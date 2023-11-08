@@ -3,26 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <title>mashin hesab</title>
 </head>
 <body>
+
     <section class="section">
+        <div class="Calculator">
+            <h1 class="header">Calculator</h1>
         
-        <div class="container-output">
-            <h1>هر قسط وام:</h1>
-            <p id="output-payment" class="output"></p>
+            <div class="monitor" id="monitor"></div>
+
+            <div class="keys">
+                <span class="btn" id="btn" value="1">1</span>
+                <span class="btn" id="btn" value="2">2</span>
+                <span class="btn" id="btn" value="3">3</span>
+                <span class="btn" id="btn" value="4">4</span>
+                <span class="btn" id="btn" value="5">5</span>
+                <span class="btn" id="btn" value="6">6</span>
+                <span class="btn" id="btn" value="7">7</span>
+                <span class="btn" id="btn" value="8">8</span>
+                <span class="btn" id="btn" value="9">9</span>
+                <span class="btn" id="btn" value="0">0</span>
+                <span class="btn signs" id="btn" value="+">+</span>
+                <span class="btn signs" id="btn" value="-">-</span>
+                <span class="btn signs" id="btn" value="*">*</span>
+                <span class="btn signs" id="btn" value="/">/</span>
+                <span class="btn signs" id="btn" value=".">.</span>
+                <span class="btn signs equal" id="equal" value="=">=</span>
+
+            </div>
+            <div class="footer">
+                <p>ماشین حساب ازمایشی</p>
+            </div>
+        
         </div>
-       
-        <div class="body">
-            <input type="text"  id = "tot" class="input">
-            <input type="text"  id = "rate" class="input">
-            <input type="text"  id = "month" class="input">
-           
-        </div>
-        <button class="btn" id="btn">حساب</button>
     </section>
-    
+
     <script src="./scrypt.js"></script>
 </body>
 </html>
