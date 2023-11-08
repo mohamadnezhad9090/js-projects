@@ -1,48 +1,60 @@
 *{
     direction: rtl;
-}
-.body{
-    /* background: rgb(107, 107, 107); */
-    /* width: 25rem; */
-    /* position: absolute; */
-    display: flex;
-    /* grid-template-rows: repeat(5,1fr); */
-    flex-wrap: wrap;    
+    text-align: center;
     
 }
 .section{
-    background: rgb(107, 107, 107);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    background: rgb(194, 194, 194);
+    height: 60rem;
 }
-.input{
-    margin: 1rem;
-    width: 20rem;
-    height: 2rem;
+.Calculator{
+    background: rgb(49, 49, 49);
+    margin-top: 3rem;
+    margin-bottom: auto;
+    max-width: 25rem;
+    border-radius: 1%;
+}
+.monitor{
+    background: white;
+    min-height: 3rem;
+    margin: 1.5rem;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+.header{
+    color: rgb(182, 182, 182);
+}
+.keys{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    
 }
 .btn{
-    height: 2rem;
-    
-    max-width: 5rem;
-    margin: 2rem;
-    font-weight: bold;
+    min-width: 4.5rem;
+    background: rgb(255, 255, 255);
+    padding: 1.5rem;
+    margin: 0.25rem;
+    font-size: 2rem;
+    border-radius: 6%;
 }
-
-.container-output{
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-
-
+.footer{
+    color: aliceblue;
 }
-
-.output{
-    background-color: aliceblue;
-    display: inline;
-    width: 10rem;
-    height: 2rem;
-    width: 20rem;
-    
-    margin-left: 6rem;
-
+.btn:hover{
+    cursor: pointer;
+    background: rgb(206, 206, 206);
+}
+.signs{
+    background: rgb(155, 155, 155);
+}
+.equal{
+    width: 100%;
 }

@@ -1,30 +1,72 @@
-var tot = document.getElementById("tot");
-var rate = document.getElementById("rate");
-var month = document.getElementById("month");
-const btn = document.getElementById("btn");
-const output_payment = document.getElementById("output-payment");
-
-
-var profit = 0 ;
-var payment = 0 ;
-
-function clear(){
-    payment = 0;
-    profit = 0;
-
+const monitor = document.getElementById("monitor");
+const btn = document.querySelectorAll("span");
+const equal = document.getElementById("equal");
+let arr = [];
+function sort(){    
+    for(let a = 0; a <= arr.length - 2; a++){
+        if(arr[a] != "+" & arr[a] != "-" & arr[a] != "*" & arr[a] != "/"){
+            if(arr[a + 1] != "+" & arr[a + 1] != "-" & arr[a + 1] != "*" & arr[a + 1] != "/"){
+                arr[a] = arr[a] + arr[a + 1];
+                arr.splice(a + 1, 1);
+                console.log(arr);
+                
+            }
+            if(a >= 1 & arr[a - 1] != "+" & arr[a - 1] != "-" & arr[a - 1] != "*" & arr[a - 1] != "/"){
+                arr[a - 1] = arr[a - 1] + arr[a];
+                arr.splice(a, 1);
+                console.log(arr);
+            }
+        }
+    }
 }
+equal.addEventListener("click", sort);
+function add(e){
+    let para = document.createElement("p");
+    let node = document.createTextNode(e);
+    para.appendChild(node);
+    monitor.append(para);
+    arr.push(e);
+}
+btn.forEach(item => {
+        item.addEventListener('click', () => {
+            add(item.innerHTML);
+        })
+});
+function print(){
 
-
-btn.addEventListener('click',()=>{
-   
-    profit += (Number(tot.value) * Number(rate.value)*(Number(month.value) + 1)) / 2400;
-    payment += (Number(tot.value) + profit ) / Number(month.value);
-    output_payment.innerText = payment ;
-    clear();
-
-
-})
-
-
-
-
+    let len = arr.length;
+    for (let a = 1 ; a <= len - 2; a += 2){
+        if(arr[a] == "*"){
+            let demo = arr[a-1] * arr[a+1];
+            arr[a-1] = demo;
+            arr.splice(a, 1);
+            arr.splice(a, 1);
+        }
+        if(arr[a] == "/"){
+            let demo = arr[a-1] / arr[a+1];
+            arr[a-1] = demo;
+            arr.splice(a, 1);
+            arr.splice(a, 1);
+        }
+    }
+    len = arr.length;
+    for (let a = 1 ; a <= len - 2; a += 2){
+        if(arr[a] == "+"){
+            let demo = Number(arr[a-1]) + Number(arr[a+1]);
+            arr[a-1] = demo;
+            arr.splice(a, 1);
+            arr.splice(a, 1);
+        }
+        if(arr[a] == "-"){
+            let demo = arr[a-1] - arr[a+1];
+            arr[a-1] = demo;
+            arr.splice(a, 1);
+            arr.splice(a, 1);
+        }
+    }
+    let para = document.createElement("p");
+    let node = document.createTextNode(arr[0]);
+    para.appendChild(node);
+    monitor.append(para);
+}
+equal.addEventListener("click", print);
